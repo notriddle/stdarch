@@ -1452,7 +1452,7 @@ pub unsafe fn vld1q_dup_s32(ptr: *const i32) -> int32x4_t {
     stable(feature = "neon_intrinsics", since = "1.59.0")
 )]
 pub unsafe fn vld1_dup_s64(ptr: *const i64) -> int64x1_t {
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     {
         crate::core_arch::aarch64::vld1_s64(ptr)
     }
@@ -1578,7 +1578,7 @@ pub unsafe fn vld1q_dup_u32(ptr: *const u32) -> uint32x4_t {
     stable(feature = "neon_intrinsics", since = "1.59.0")
 )]
 pub unsafe fn vld1_dup_u64(ptr: *const u64) -> uint64x1_t {
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     {
         crate::core_arch::aarch64::vld1_u64(ptr)
     }
@@ -1691,7 +1691,7 @@ pub unsafe fn vld1_dup_f32(ptr: *const f32) -> float32x2_t {
     stable(feature = "neon_intrinsics", since = "1.59.0")
 )]
 pub unsafe fn vld1_dup_p64(ptr: *const p64) -> poly64x1_t {
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     {
         crate::core_arch::aarch64::vld1_p64(ptr)
     }
@@ -6618,7 +6618,7 @@ pub unsafe fn vpadal_s8(a: int16x4_t, b: int8x8_t) -> int16x4_t {
     {
         crate::core_arch::arm::neon::vpadal_s8_(a, b)
     }
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     {
         simd_add(vpaddl_s8_(b), a)
     }
@@ -6639,7 +6639,7 @@ pub unsafe fn vpadal_s16(a: int32x2_t, b: int16x4_t) -> int32x2_t {
     {
         crate::core_arch::arm::neon::vpadal_s16_(a, b)
     }
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     {
         simd_add(vpaddl_s16_(b), a)
     }
@@ -6660,7 +6660,7 @@ pub unsafe fn vpadal_s32(a: int64x1_t, b: int32x2_t) -> int64x1_t {
     {
         crate::core_arch::arm::neon::vpadal_s32_(a, b)
     }
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     {
         simd_add(vpaddl_s32_(b), a)
     }
@@ -6681,7 +6681,7 @@ pub unsafe fn vpadalq_s8(a: int16x8_t, b: int8x16_t) -> int16x8_t {
     {
         crate::core_arch::arm::neon::vpadalq_s8_(a, b)
     }
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     {
         simd_add(vpaddlq_s8_(b), a)
     }
@@ -6702,7 +6702,7 @@ pub unsafe fn vpadalq_s16(a: int32x4_t, b: int16x8_t) -> int32x4_t {
     {
         crate::core_arch::arm::neon::vpadalq_s16_(a, b)
     }
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     {
         simd_add(vpaddlq_s16_(b), a)
     }
@@ -6723,7 +6723,7 @@ pub unsafe fn vpadalq_s32(a: int64x2_t, b: int32x4_t) -> int64x2_t {
     {
         crate::core_arch::arm::neon::vpadalq_s32_(a, b)
     }
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     {
         simd_add(vpaddlq_s32_(b), a)
     }
@@ -6744,7 +6744,7 @@ pub unsafe fn vpadal_u8(a: uint16x4_t, b: uint8x8_t) -> uint16x4_t {
     {
         crate::core_arch::arm::neon::vpadal_u8_(a, b)
     }
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     {
         simd_add(vpaddl_u8_(b), a)
     }
@@ -6765,7 +6765,7 @@ pub unsafe fn vpadal_u16(a: uint32x2_t, b: uint16x4_t) -> uint32x2_t {
     {
         crate::core_arch::arm::neon::vpadal_u16_(a, b)
     }
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     {
         simd_add(vpaddl_u16_(b), a)
     }
@@ -6786,7 +6786,7 @@ pub unsafe fn vpadal_u32(a: uint64x1_t, b: uint32x2_t) -> uint64x1_t {
     {
         crate::core_arch::arm::neon::vpadal_u32_(a, b)
     }
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     {
         simd_add(vpaddl_u32_(b), a)
     }
@@ -6807,7 +6807,7 @@ pub unsafe fn vpadalq_u8(a: uint16x8_t, b: uint8x16_t) -> uint16x8_t {
     {
         crate::core_arch::arm::neon::vpadalq_u8_(a, b)
     }
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     {
         simd_add(vpaddlq_u8_(b), a)
     }
@@ -6828,7 +6828,7 @@ pub unsafe fn vpadalq_u16(a: uint32x4_t, b: uint16x8_t) -> uint32x4_t {
     {
         crate::core_arch::arm::neon::vpadalq_u16_(a, b)
     }
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     {
         simd_add(vpaddlq_u16_(b), a)
     }
@@ -6849,7 +6849,7 @@ pub unsafe fn vpadalq_u32(a: uint64x2_t, b: uint32x4_t) -> uint64x2_t {
     {
         crate::core_arch::arm::neon::vpadalq_u32_(a, b)
     }
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     {
         simd_add(vpaddlq_u32_(b), a)
     }
@@ -7089,7 +7089,7 @@ pub unsafe fn vcombine_p64(low: poly64x1_t, high: poly64x1_t) -> poly64x2_t {
 #[cfg(test)]
 mod tests {
     use super::*;
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     use crate::core_arch::aarch64::*;
     #[cfg(target_arch = "arm")]
     use crate::core_arch::arm::*;
@@ -12695,7 +12695,7 @@ mod tests {
     test_vcombine!(test_vcombine_s64 => vcombine_s64([-3_i64], [13_i64]));
     test_vcombine!(test_vcombine_u64 => vcombine_u64([3_u64], [13_u64]));
     test_vcombine!(test_vcombine_p64 => vcombine_p64([3_u64], [13_u64]));
-    #[cfg(target_arch = "aarch64")]
+    #[cfg(any(doc, target_arch = "aarch64"))]
     test_vcombine!(test_vcombine_f64 => vcombine_f64([-3_f64], [13_f64]));
 }
 

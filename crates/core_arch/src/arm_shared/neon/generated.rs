@@ -1532,7 +1532,7 @@ pub unsafe fn vcgtq_s32(a: int32x4_t, b: int32x4_t) -> uint32x4_t {
     simd_gt(a, b)
 }
 
-/// Compare unsigned highe
+/// Compare unsigned greater than
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vcgt_u8)
 #[inline]
@@ -1545,7 +1545,7 @@ pub unsafe fn vcgt_u8(a: uint8x8_t, b: uint8x8_t) -> uint8x8_t {
     simd_gt(a, b)
 }
 
-/// Compare unsigned highe
+/// Compare unsigned greater than
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vcgtq_u8)
 #[inline]
@@ -1558,7 +1558,7 @@ pub unsafe fn vcgtq_u8(a: uint8x16_t, b: uint8x16_t) -> uint8x16_t {
     simd_gt(a, b)
 }
 
-/// Compare unsigned highe
+/// Compare unsigned greater than
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vcgt_u16)
 #[inline]
@@ -1571,7 +1571,7 @@ pub unsafe fn vcgt_u16(a: uint16x4_t, b: uint16x4_t) -> uint16x4_t {
     simd_gt(a, b)
 }
 
-/// Compare unsigned highe
+/// Compare unsigned greater than
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vcgtq_u16)
 #[inline]
@@ -1584,7 +1584,7 @@ pub unsafe fn vcgtq_u16(a: uint16x8_t, b: uint16x8_t) -> uint16x8_t {
     simd_gt(a, b)
 }
 
-/// Compare unsigned highe
+/// Compare unsigned greater than
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vcgt_u32)
 #[inline]
@@ -1597,7 +1597,7 @@ pub unsafe fn vcgt_u32(a: uint32x2_t, b: uint32x2_t) -> uint32x2_t {
     simd_gt(a, b)
 }
 
-/// Compare unsigned highe
+/// Compare unsigned greater than
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vcgtq_u32)
 #[inline]
@@ -2870,7 +2870,7 @@ pub unsafe fn vcvtq_f32_u32(a: uint32x4_t) -> float32x4_t {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vcvt_n_f32_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vcvt, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -2907,7 +2907,7 @@ vcvt_n_f32_s32_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vcvtq_n_f32_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vcvt, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -2944,7 +2944,7 @@ vcvtq_n_f32_s32_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vcvt_n_f32_u32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vcvt, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -2981,7 +2981,7 @@ vcvt_n_f32_u32_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vcvtq_n_f32_u32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vcvt, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -3018,7 +3018,7 @@ vcvtq_n_f32_u32_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vcvt_n_s32_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vcvt, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -3055,7 +3055,7 @@ vcvt_n_s32_f32_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vcvtq_n_s32_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vcvt, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -3092,7 +3092,7 @@ vcvtq_n_s32_f32_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vcvt_n_u32_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vcvt, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -3129,7 +3129,7 @@ vcvt_n_u32_f32_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vcvtq_n_u32_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vcvt, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -8532,7 +8532,7 @@ vld1q_f32_x4_(a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2_s8(a: *const i8) -> int8x8x2_t {
@@ -8565,7 +8565,7 @@ vld2_s8_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2_s16(a: *const i16) -> int16x4x2_t {
@@ -8598,7 +8598,7 @@ vld2_s16_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2_s32(a: *const i32) -> int32x2x2_t {
@@ -8631,7 +8631,7 @@ vld2_s32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2q_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2q_s8(a: *const i8) -> int8x16x2_t {
@@ -8664,7 +8664,7 @@ vld2q_s8_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2q_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2q_s16(a: *const i16) -> int16x8x2_t {
@@ -8697,7 +8697,7 @@ vld2q_s16_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2q_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2q_s32(a: *const i32) -> int32x4x2_t {
@@ -8730,7 +8730,7 @@ vld2q_s32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(nop))]
 pub unsafe fn vld2_s64(a: *const i64) -> int64x1x2_t {
@@ -8919,7 +8919,7 @@ pub unsafe fn vld2_p64(a: *const p64) -> poly64x1x2_t {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2_f32(a: *const f32) -> float32x2x2_t {
@@ -8952,7 +8952,7 @@ vld2_f32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2q_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2q_f32(a: *const f32) -> float32x4x2_t {
@@ -8985,7 +8985,7 @@ vld2q_f32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2_dup_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2_dup_s8(a: *const i8) -> int8x8x2_t {
@@ -9018,7 +9018,7 @@ vld2_dup_s8_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2_dup_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2_dup_s16(a: *const i16) -> int16x4x2_t {
@@ -9051,7 +9051,7 @@ vld2_dup_s16_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2_dup_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2_dup_s32(a: *const i32) -> int32x2x2_t {
@@ -9084,7 +9084,7 @@ vld2_dup_s32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2q_dup_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2q_dup_s8(a: *const i8) -> int8x16x2_t {
@@ -9117,7 +9117,7 @@ vld2q_dup_s8_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2q_dup_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2q_dup_s16(a: *const i16) -> int16x8x2_t {
@@ -9150,7 +9150,7 @@ vld2q_dup_s16_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2q_dup_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2q_dup_s32(a: *const i32) -> int32x4x2_t {
@@ -9183,7 +9183,7 @@ vld2q_dup_s32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2_dup_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(nop))]
 pub unsafe fn vld2_dup_s64(a: *const i64) -> int64x1x2_t {
@@ -9372,7 +9372,7 @@ pub unsafe fn vld2_dup_p64(a: *const p64) -> poly64x1x2_t {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2_dup_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2_dup_f32(a: *const f32) -> float32x2x2_t {
@@ -9405,7 +9405,7 @@ vld2_dup_f32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2q_dup_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2))]
 pub unsafe fn vld2q_dup_f32(a: *const f32) -> float32x4x2_t {
@@ -9438,7 +9438,7 @@ vld2q_dup_f32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2_lane_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -9475,7 +9475,7 @@ vld2_lane_s8_(b.0, b.1, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2_lane_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -9512,7 +9512,7 @@ vld2_lane_s16_(b.0, b.1, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2_lane_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -9549,7 +9549,7 @@ vld2_lane_s32_(b.0, b.1, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2q_lane_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -9586,7 +9586,7 @@ vld2q_lane_s16_(b.0, b.1, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2q_lane_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -9743,7 +9743,7 @@ pub unsafe fn vld2q_lane_p16<const LANE: i32>(a: *const p16, b: poly16x8x2_t) ->
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2_lane_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -9780,7 +9780,7 @@ vld2_lane_f32_(b.0, b.1, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld2q_lane_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld2, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -9817,7 +9817,7 @@ vld2q_lane_f32_(b.0, b.1, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3_s8(a: *const i8) -> int8x8x3_t {
@@ -9850,7 +9850,7 @@ vld3_s8_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3_s16(a: *const i16) -> int16x4x3_t {
@@ -9883,7 +9883,7 @@ vld3_s16_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3_s32(a: *const i32) -> int32x2x3_t {
@@ -9916,7 +9916,7 @@ vld3_s32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3q_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3q_s8(a: *const i8) -> int8x16x3_t {
@@ -9949,7 +9949,7 @@ vld3q_s8_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3q_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3q_s16(a: *const i16) -> int16x8x3_t {
@@ -9982,7 +9982,7 @@ vld3q_s16_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3q_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3q_s32(a: *const i32) -> int32x4x3_t {
@@ -10015,7 +10015,7 @@ vld3q_s32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(nop))]
 pub unsafe fn vld3_s64(a: *const i64) -> int64x1x3_t {
@@ -10204,7 +10204,7 @@ pub unsafe fn vld3_p64(a: *const p64) -> poly64x1x3_t {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3_f32(a: *const f32) -> float32x2x3_t {
@@ -10237,7 +10237,7 @@ vld3_f32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3q_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3q_f32(a: *const f32) -> float32x4x3_t {
@@ -10270,7 +10270,7 @@ vld3q_f32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3_dup_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3_dup_s8(a: *const i8) -> int8x8x3_t {
@@ -10303,7 +10303,7 @@ vld3_dup_s8_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3_dup_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3_dup_s16(a: *const i16) -> int16x4x3_t {
@@ -10336,7 +10336,7 @@ vld3_dup_s16_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3_dup_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3_dup_s32(a: *const i32) -> int32x2x3_t {
@@ -10369,7 +10369,7 @@ vld3_dup_s32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3q_dup_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3q_dup_s8(a: *const i8) -> int8x16x3_t {
@@ -10402,7 +10402,7 @@ vld3q_dup_s8_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3q_dup_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3q_dup_s16(a: *const i16) -> int16x8x3_t {
@@ -10435,7 +10435,7 @@ vld3q_dup_s16_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3q_dup_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3q_dup_s32(a: *const i32) -> int32x4x3_t {
@@ -10468,7 +10468,7 @@ vld3q_dup_s32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3_dup_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(nop))]
 pub unsafe fn vld3_dup_s64(a: *const i64) -> int64x1x3_t {
@@ -10657,7 +10657,7 @@ pub unsafe fn vld3_dup_p64(a: *const p64) -> poly64x1x3_t {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3_dup_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3_dup_f32(a: *const f32) -> float32x2x3_t {
@@ -10690,7 +10690,7 @@ vld3_dup_f32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3q_dup_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3))]
 pub unsafe fn vld3q_dup_f32(a: *const f32) -> float32x4x3_t {
@@ -10723,7 +10723,7 @@ vld3q_dup_f32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3_lane_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -10760,7 +10760,7 @@ vld3_lane_s8_(b.0, b.1, b.2, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3_lane_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -10797,7 +10797,7 @@ vld3_lane_s16_(b.0, b.1, b.2, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3_lane_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -10834,7 +10834,7 @@ vld3_lane_s32_(b.0, b.1, b.2, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3q_lane_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -10871,7 +10871,7 @@ vld3q_lane_s16_(b.0, b.1, b.2, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3q_lane_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -11028,7 +11028,7 @@ pub unsafe fn vld3q_lane_p16<const LANE: i32>(a: *const p16, b: poly16x8x3_t) ->
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3_lane_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -11065,7 +11065,7 @@ vld3_lane_f32_(b.0, b.1, b.2, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld3q_lane_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld3, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -11102,7 +11102,7 @@ vld3q_lane_f32_(b.0, b.1, b.2, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4_s8(a: *const i8) -> int8x8x4_t {
@@ -11135,7 +11135,7 @@ vld4_s8_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4_s16(a: *const i16) -> int16x4x4_t {
@@ -11168,7 +11168,7 @@ vld4_s16_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4_s32(a: *const i32) -> int32x2x4_t {
@@ -11201,7 +11201,7 @@ vld4_s32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4q_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4q_s8(a: *const i8) -> int8x16x4_t {
@@ -11234,7 +11234,7 @@ vld4q_s8_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4q_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4q_s16(a: *const i16) -> int16x8x4_t {
@@ -11267,7 +11267,7 @@ vld4q_s16_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4q_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4q_s32(a: *const i32) -> int32x4x4_t {
@@ -11300,7 +11300,7 @@ vld4q_s32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(nop))]
 pub unsafe fn vld4_s64(a: *const i64) -> int64x1x4_t {
@@ -11489,7 +11489,7 @@ pub unsafe fn vld4_p64(a: *const p64) -> poly64x1x4_t {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4_f32(a: *const f32) -> float32x2x4_t {
@@ -11522,7 +11522,7 @@ vld4_f32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4q_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4q_f32(a: *const f32) -> float32x4x4_t {
@@ -11555,7 +11555,7 @@ vld4q_f32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4_dup_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4_dup_s8(a: *const i8) -> int8x8x4_t {
@@ -11588,7 +11588,7 @@ vld4_dup_s8_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4_dup_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4_dup_s16(a: *const i16) -> int16x4x4_t {
@@ -11621,7 +11621,7 @@ vld4_dup_s16_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4_dup_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4_dup_s32(a: *const i32) -> int32x2x4_t {
@@ -11654,7 +11654,7 @@ vld4_dup_s32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4q_dup_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4q_dup_s8(a: *const i8) -> int8x16x4_t {
@@ -11687,7 +11687,7 @@ vld4q_dup_s8_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4q_dup_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4q_dup_s16(a: *const i16) -> int16x8x4_t {
@@ -11720,7 +11720,7 @@ vld4q_dup_s16_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4q_dup_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4q_dup_s32(a: *const i32) -> int32x4x4_t {
@@ -11753,7 +11753,7 @@ vld4q_dup_s32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4_dup_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(nop))]
 pub unsafe fn vld4_dup_s64(a: *const i64) -> int64x1x4_t {
@@ -11942,7 +11942,7 @@ pub unsafe fn vld4_dup_p64(a: *const p64) -> poly64x1x4_t {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4_dup_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4_dup_f32(a: *const f32) -> float32x2x4_t {
@@ -11975,7 +11975,7 @@ vld4_dup_f32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4q_dup_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4))]
 pub unsafe fn vld4q_dup_f32(a: *const f32) -> float32x4x4_t {
@@ -12008,7 +12008,7 @@ vld4q_dup_f32_(a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4_lane_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -12045,7 +12045,7 @@ vld4_lane_s8_(b.0, b.1, b.2, b.3, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4_lane_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -12082,7 +12082,7 @@ vld4_lane_s16_(b.0, b.1, b.2, b.3, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4_lane_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -12119,7 +12119,7 @@ vld4_lane_s32_(b.0, b.1, b.2, b.3, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4q_lane_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -12156,7 +12156,7 @@ vld4q_lane_s16_(b.0, b.1, b.2, b.3, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4q_lane_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -12313,7 +12313,7 @@ pub unsafe fn vld4q_lane_p16<const LANE: i32>(a: *const p16, b: poly16x8x4_t) ->
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4_lane_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -12350,7 +12350,7 @@ vld4_lane_f32_(b.0, b.1, b.2, b.3, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vld4q_lane_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vld4, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -12747,7 +12747,7 @@ pub unsafe fn vst1q_lane_f32<const LANE: i32>(a: *mut f32, b: float32x4_t) {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1_s8_x2)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1_s8_x2(a: *mut i8, b: int8x8x2_t) {
@@ -12780,7 +12780,7 @@ vst1_s8_x2_(b.0, b.1, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1_s16_x2)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1_s16_x2(a: *mut i16, b: int16x4x2_t) {
@@ -12813,7 +12813,7 @@ vst1_s16_x2_(b.0, b.1, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1_s32_x2)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1_s32_x2(a: *mut i32, b: int32x2x2_t) {
@@ -12846,7 +12846,7 @@ vst1_s32_x2_(b.0, b.1, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1_s64_x2)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1_s64_x2(a: *mut i64, b: int64x1x2_t) {
@@ -12879,7 +12879,7 @@ vst1_s64_x2_(b.0, b.1, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1q_s8_x2)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1q_s8_x2(a: *mut i8, b: int8x16x2_t) {
@@ -12912,7 +12912,7 @@ vst1q_s8_x2_(b.0, b.1, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1q_s16_x2)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1q_s16_x2(a: *mut i16, b: int16x8x2_t) {
@@ -12945,7 +12945,7 @@ vst1q_s16_x2_(b.0, b.1, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1q_s32_x2)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1q_s32_x2(a: *mut i32, b: int32x4x2_t) {
@@ -12978,7 +12978,7 @@ vst1q_s32_x2_(b.0, b.1, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1q_s64_x2)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1q_s64_x2(a: *mut i64, b: int64x2x2_t) {
@@ -13011,7 +13011,7 @@ vst1q_s64_x2_(b.0, b.1, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1_s8_x3)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1_s8_x3(a: *mut i8, b: int8x8x3_t) {
@@ -13044,7 +13044,7 @@ vst1_s8_x3_(b.0, b.1, b.2, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1_s16_x3)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1_s16_x3(a: *mut i16, b: int16x4x3_t) {
@@ -13077,7 +13077,7 @@ vst1_s16_x3_(b.0, b.1, b.2, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1_s32_x3)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1_s32_x3(a: *mut i32, b: int32x2x3_t) {
@@ -13110,7 +13110,7 @@ vst1_s32_x3_(b.0, b.1, b.2, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1_s64_x3)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1_s64_x3(a: *mut i64, b: int64x1x3_t) {
@@ -13143,7 +13143,7 @@ vst1_s64_x3_(b.0, b.1, b.2, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1q_s8_x3)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1q_s8_x3(a: *mut i8, b: int8x16x3_t) {
@@ -13176,7 +13176,7 @@ vst1q_s8_x3_(b.0, b.1, b.2, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1q_s16_x3)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1q_s16_x3(a: *mut i16, b: int16x8x3_t) {
@@ -13209,7 +13209,7 @@ vst1q_s16_x3_(b.0, b.1, b.2, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1q_s32_x3)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1q_s32_x3(a: *mut i32, b: int32x4x3_t) {
@@ -13242,7 +13242,7 @@ vst1q_s32_x3_(b.0, b.1, b.2, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1q_s64_x3)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1q_s64_x3(a: *mut i64, b: int64x2x3_t) {
@@ -13275,7 +13275,7 @@ vst1q_s64_x3_(b.0, b.1, b.2, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1_s8_x4)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1_s8_x4(a: *mut i8, b: int8x8x4_t) {
@@ -13308,7 +13308,7 @@ vst1_s8_x4_(b.0, b.1, b.2, b.3, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1_s16_x4)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1_s16_x4(a: *mut i16, b: int16x4x4_t) {
@@ -13341,7 +13341,7 @@ vst1_s16_x4_(b.0, b.1, b.2, b.3, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1_s32_x4)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1_s32_x4(a: *mut i32, b: int32x2x4_t) {
@@ -13374,7 +13374,7 @@ vst1_s32_x4_(b.0, b.1, b.2, b.3, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1_s64_x4)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1_s64_x4(a: *mut i64, b: int64x1x4_t) {
@@ -13407,7 +13407,7 @@ vst1_s64_x4_(b.0, b.1, b.2, b.3, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1q_s8_x4)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1q_s8_x4(a: *mut i8, b: int8x16x4_t) {
@@ -13440,7 +13440,7 @@ vst1q_s8_x4_(b.0, b.1, b.2, b.3, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1q_s16_x4)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1q_s16_x4(a: *mut i16, b: int16x8x4_t) {
@@ -13473,7 +13473,7 @@ vst1q_s16_x4_(b.0, b.1, b.2, b.3, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1q_s32_x4)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1q_s32_x4(a: *mut i32, b: int32x4x4_t) {
@@ -13506,7 +13506,7 @@ vst1q_s32_x4_(b.0, b.1, b.2, b.3, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1q_s64_x4)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1q_s64_x4(a: *mut i64, b: int64x2x4_t) {
@@ -14085,7 +14085,7 @@ pub unsafe fn vst1q_p64_x4(a: *mut p64, b: poly64x2x4_t) {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1_f32_x2)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1_f32_x2(a: *mut f32, b: float32x2x2_t) {
@@ -14118,7 +14118,7 @@ vst1_f32_x2_(b.0, b.1, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1q_f32_x2)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1q_f32_x2(a: *mut f32, b: float32x4x2_t) {
@@ -14151,7 +14151,7 @@ vst1q_f32_x2_(b.0, b.1, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1_f32_x3)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1_f32_x3(a: *mut f32, b: float32x2x3_t) {
@@ -14184,7 +14184,7 @@ vst1_f32_x3_(b.0, b.1, b.2, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1q_f32_x3)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1q_f32_x3(a: *mut f32, b: float32x4x3_t) {
@@ -14217,7 +14217,7 @@ vst1q_f32_x3_(b.0, b.1, b.2, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1_f32_x4)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1_f32_x4(a: *mut f32, b: float32x2x4_t) {
@@ -14250,7 +14250,7 @@ vst1_f32_x4_(b.0, b.1, b.2, b.3, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst1q_f32_x4)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst1))]
 pub unsafe fn vst1q_f32_x4(a: *mut f32, b: float32x4x4_t) {
@@ -14283,7 +14283,7 @@ vst1q_f32_x4_(b.0, b.1, b.2, b.3, a)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst2))]
 pub unsafe fn vst2_s8(a: *mut i8, b: int8x8x2_t) {
@@ -14316,7 +14316,7 @@ vst2_s8_(b.0, b.1, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst2))]
 pub unsafe fn vst2_s16(a: *mut i16, b: int16x4x2_t) {
@@ -14349,7 +14349,7 @@ vst2_s16_(b.0, b.1, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst2))]
 pub unsafe fn vst2_s32(a: *mut i32, b: int32x2x2_t) {
@@ -14382,7 +14382,7 @@ vst2_s32_(b.0, b.1, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2q_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst2))]
 pub unsafe fn vst2q_s8(a: *mut i8, b: int8x16x2_t) {
@@ -14415,7 +14415,7 @@ vst2q_s8_(b.0, b.1, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2q_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst2))]
 pub unsafe fn vst2q_s16(a: *mut i16, b: int16x8x2_t) {
@@ -14448,7 +14448,7 @@ vst2q_s16_(b.0, b.1, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2q_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst2))]
 pub unsafe fn vst2q_s32(a: *mut i32, b: int32x4x2_t) {
@@ -14481,7 +14481,7 @@ vst2q_s32_(b.0, b.1, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(nop))]
 pub unsafe fn vst2_s64(a: *mut i64, b: int64x1x2_t) {
@@ -14670,7 +14670,7 @@ pub unsafe fn vst2_p64(a: *mut p64, b: poly64x1x2_t) {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst2))]
 pub unsafe fn vst2_f32(a: *mut f32, b: float32x2x2_t) {
@@ -14703,7 +14703,7 @@ vst2_f32_(b.0, b.1, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2q_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst2))]
 pub unsafe fn vst2q_f32(a: *mut f32, b: float32x4x2_t) {
@@ -14736,7 +14736,7 @@ vst2q_f32_(b.0, b.1, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2_lane_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst2, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -14773,7 +14773,7 @@ vst2_lane_s8_(b.0, b.1, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2_lane_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst2, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -14810,7 +14810,7 @@ vst2_lane_s16_(b.0, b.1, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2_lane_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst2, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -14847,7 +14847,7 @@ vst2_lane_s32_(b.0, b.1, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2q_lane_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst2, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -14884,7 +14884,7 @@ vst2q_lane_s16_(b.0, b.1, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2q_lane_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst2, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -15041,7 +15041,7 @@ pub unsafe fn vst2q_lane_p16<const LANE: i32>(a: *mut p16, b: poly16x8x2_t) {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2_lane_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst2, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -15078,7 +15078,7 @@ vst2_lane_f32_(b.0, b.1, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst2q_lane_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst2, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -15115,7 +15115,7 @@ vst2q_lane_f32_(b.0, b.1, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst3))]
 pub unsafe fn vst3_s8(a: *mut i8, b: int8x8x3_t) {
@@ -15148,7 +15148,7 @@ vst3_s8_(b.0, b.1, b.2, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst3))]
 pub unsafe fn vst3_s16(a: *mut i16, b: int16x4x3_t) {
@@ -15181,7 +15181,7 @@ vst3_s16_(b.0, b.1, b.2, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst3))]
 pub unsafe fn vst3_s32(a: *mut i32, b: int32x2x3_t) {
@@ -15214,7 +15214,7 @@ vst3_s32_(b.0, b.1, b.2, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3q_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst3))]
 pub unsafe fn vst3q_s8(a: *mut i8, b: int8x16x3_t) {
@@ -15247,7 +15247,7 @@ vst3q_s8_(b.0, b.1, b.2, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3q_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst3))]
 pub unsafe fn vst3q_s16(a: *mut i16, b: int16x8x3_t) {
@@ -15280,7 +15280,7 @@ vst3q_s16_(b.0, b.1, b.2, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3q_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst3))]
 pub unsafe fn vst3q_s32(a: *mut i32, b: int32x4x3_t) {
@@ -15313,7 +15313,7 @@ vst3q_s32_(b.0, b.1, b.2, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(nop))]
 pub unsafe fn vst3_s64(a: *mut i64, b: int64x1x3_t) {
@@ -15502,7 +15502,7 @@ pub unsafe fn vst3_p64(a: *mut p64, b: poly64x1x3_t) {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst3))]
 pub unsafe fn vst3_f32(a: *mut f32, b: float32x2x3_t) {
@@ -15535,7 +15535,7 @@ vst3_f32_(b.0, b.1, b.2, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3q_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst3))]
 pub unsafe fn vst3q_f32(a: *mut f32, b: float32x4x3_t) {
@@ -15568,7 +15568,7 @@ vst3q_f32_(b.0, b.1, b.2, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3_lane_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst3, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -15605,7 +15605,7 @@ vst3_lane_s8_(b.0, b.1, b.2, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3_lane_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst3, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -15642,7 +15642,7 @@ vst3_lane_s16_(b.0, b.1, b.2, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3_lane_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst3, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -15679,7 +15679,7 @@ vst3_lane_s32_(b.0, b.1, b.2, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3q_lane_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst3, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -15716,7 +15716,7 @@ vst3q_lane_s16_(b.0, b.1, b.2, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3q_lane_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst3, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -15873,7 +15873,7 @@ pub unsafe fn vst3q_lane_p16<const LANE: i32>(a: *mut p16, b: poly16x8x3_t) {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3_lane_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst3, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -15910,7 +15910,7 @@ vst3_lane_f32_(b.0, b.1, b.2, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst3q_lane_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst3, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -15947,7 +15947,7 @@ vst3q_lane_f32_(b.0, b.1, b.2, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst4))]
 pub unsafe fn vst4_s8(a: *mut i8, b: int8x8x4_t) {
@@ -15980,7 +15980,7 @@ vst4_s8_(b.0, b.1, b.2, b.3, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst4))]
 pub unsafe fn vst4_s16(a: *mut i16, b: int16x4x4_t) {
@@ -16013,7 +16013,7 @@ vst4_s16_(b.0, b.1, b.2, b.3, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst4))]
 pub unsafe fn vst4_s32(a: *mut i32, b: int32x2x4_t) {
@@ -16046,7 +16046,7 @@ vst4_s32_(b.0, b.1, b.2, b.3, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4q_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst4))]
 pub unsafe fn vst4q_s8(a: *mut i8, b: int8x16x4_t) {
@@ -16079,7 +16079,7 @@ vst4q_s8_(b.0, b.1, b.2, b.3, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4q_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst4))]
 pub unsafe fn vst4q_s16(a: *mut i16, b: int16x8x4_t) {
@@ -16112,7 +16112,7 @@ vst4q_s16_(b.0, b.1, b.2, b.3, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4q_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst4))]
 pub unsafe fn vst4q_s32(a: *mut i32, b: int32x4x4_t) {
@@ -16145,7 +16145,7 @@ vst4q_s32_(b.0, b.1, b.2, b.3, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(nop))]
 pub unsafe fn vst4_s64(a: *mut i64, b: int64x1x4_t) {
@@ -16334,7 +16334,7 @@ pub unsafe fn vst4_p64(a: *mut p64, b: poly64x1x4_t) {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst4))]
 pub unsafe fn vst4_f32(a: *mut f32, b: float32x2x4_t) {
@@ -16367,7 +16367,7 @@ vst4_f32_(b.0, b.1, b.2, b.3, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4q_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst4))]
 pub unsafe fn vst4q_f32(a: *mut f32, b: float32x4x4_t) {
@@ -16400,7 +16400,7 @@ vst4q_f32_(b.0, b.1, b.2, b.3, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4_lane_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst4, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -16437,7 +16437,7 @@ vst4_lane_s8_(b.0, b.1, b.2, b.3, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4_lane_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst4, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -16474,7 +16474,7 @@ vst4_lane_s16_(b.0, b.1, b.2, b.3, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4_lane_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst4, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -16511,7 +16511,7 @@ vst4_lane_s32_(b.0, b.1, b.2, b.3, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4q_lane_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst4, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -16548,7 +16548,7 @@ vst4q_lane_s16_(b.0, b.1, b.2, b.3, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4q_lane_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst4, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -16705,7 +16705,7 @@ pub unsafe fn vst4q_lane_p16<const LANE: i32>(a: *mut p16, b: poly16x8x4_t) {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4_lane_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst4, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -16742,7 +16742,7 @@ vst4_lane_f32_(b.0, b.1, b.2, b.3, LANE as i64, a as _)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vst4q_lane_f32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vst4, LANE = 0))]
 #[rustc_legacy_const_generics(2)]
@@ -20551,7 +20551,7 @@ vqrshlq_u64_(a, b)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqrshrn_n_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqrshrn, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -20588,7 +20588,7 @@ vqrshrn_n_s16_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqrshrn_n_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqrshrn, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -20625,7 +20625,7 @@ vqrshrn_n_s32_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqrshrn_n_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqrshrn, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -20662,7 +20662,7 @@ vqrshrn_n_s64_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqrshrn_n_u16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqrshrn, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -20699,7 +20699,7 @@ vqrshrn_n_u16_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqrshrn_n_u32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqrshrn, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -20736,7 +20736,7 @@ vqrshrn_n_u32_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqrshrn_n_u64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqrshrn, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -20773,7 +20773,7 @@ vqrshrn_n_u64_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqrshrun_n_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqrshrun, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -20810,7 +20810,7 @@ vqrshrun_n_s16_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqrshrun_n_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqrshrun, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -20847,7 +20847,7 @@ vqrshrun_n_s32_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqrshrun_n_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqrshrun, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21428,7 +21428,7 @@ pub unsafe fn vqshlq_n_u64<const N: i32>(a: uint64x2_t) -> uint64x2_t {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshlu_n_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshlu, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21465,7 +21465,7 @@ vqshlu_n_s8_(a, int8x8_t(N as i8, N as i8, N as i8, N as i8, N as i8, N as i8, N
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshlu_n_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshlu, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21502,7 +21502,7 @@ vqshlu_n_s16_(a, int16x4_t(N as i16, N as i16, N as i16, N as i16))
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshlu_n_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshlu, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21539,7 +21539,7 @@ vqshlu_n_s32_(a, int32x2_t(N as i32, N as i32))
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshlu_n_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshlu, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21576,7 +21576,7 @@ vqshlu_n_s64_(a, int64x1_t(N as i64))
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshluq_n_s8)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshlu, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21613,7 +21613,7 @@ vqshluq_n_s8_(a, int8x16_t(N as i8, N as i8, N as i8, N as i8, N as i8, N as i8,
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshluq_n_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshlu, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21650,7 +21650,7 @@ vqshluq_n_s16_(a, int16x8_t(N as i16, N as i16, N as i16, N as i16, N as i16, N 
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshluq_n_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshlu, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21687,7 +21687,7 @@ vqshluq_n_s32_(a, int32x4_t(N as i32, N as i32, N as i32, N as i32))
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshluq_n_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshlu, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21724,7 +21724,7 @@ vqshluq_n_s64_(a, int64x2_t(N as i64, N as i64))
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshrn_n_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshrn, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21761,7 +21761,7 @@ vqshrn_n_s16_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshrn_n_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshrn, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21798,7 +21798,7 @@ vqshrn_n_s32_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshrn_n_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshrn, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21835,7 +21835,7 @@ vqshrn_n_s64_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshrn_n_u16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshrn, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21872,7 +21872,7 @@ vqshrn_n_u16_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshrn_n_u32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshrn, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21909,7 +21909,7 @@ vqshrn_n_u32_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshrn_n_u64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshrn, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21946,7 +21946,7 @@ vqshrn_n_u64_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshrun_n_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshrun, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -21983,7 +21983,7 @@ vqshrun_n_s16_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshrun_n_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshrun, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -22020,7 +22020,7 @@ vqshrun_n_s32_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vqshrun_n_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vqshrun, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -26417,7 +26417,7 @@ pub unsafe fn vrshrq_n_u64<const N: i32>(a: uint64x2_t) -> uint64x2_t {
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vrshrn_n_s16)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vrshrn, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -26454,7 +26454,7 @@ vrshrn_n_s16_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vrshrn_n_s32)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vrshrn, N = 2))]
 #[rustc_legacy_const_generics(1)]
@@ -26491,7 +26491,7 @@ vrshrn_n_s32_(a, N)
 ///
 /// [Arm's documentation](https://developer.arm.com/architectures/instruction-sets/intrinsics/vrshrn_n_s64)
 #[inline]
-#[cfg(target_arch = "arm")]
+#[cfg(any(target_arch = "arm", doc))]
 #[target_feature(enable = "neon,v7")]
 #[cfg_attr(test, assert_instr(vrshrn, N = 2))]
 #[rustc_legacy_const_generics(1)]

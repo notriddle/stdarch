@@ -2509,7 +2509,7 @@ fn gen_arm(
             r#"
 {function_doc}
 #[inline]
-#[cfg(target_arch = "arm")]{target_feature_arm}
+#[cfg(any(target_arch = "arm", doc))]{target_feature_arm}
 #[cfg_attr(test, assert_instr({assert_arm}{const_assert}))]{const_legacy}
 {call_arm}
 
