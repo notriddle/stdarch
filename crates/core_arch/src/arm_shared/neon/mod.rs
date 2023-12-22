@@ -2087,7 +2087,7 @@ pub unsafe fn vld1_dup_s64(ptr: *const i64) -> int64x1_t {
     {
         crate::core_arch::aarch64::vld1_s64(ptr)
     }
-    #[cfg(target_arch = "arm")]
+    #[cfg(any(target_arch = "arm", all(doc, not(target_arch = "aarch64"))))]
     {
         crate::core_arch::arm::vld1_s64(ptr)
     }
@@ -2269,7 +2269,7 @@ pub unsafe fn vld1_dup_u64(ptr: *const u64) -> uint64x1_t {
     {
         crate::core_arch::aarch64::vld1_u64(ptr)
     }
-    #[cfg(target_arch = "arm")]
+    #[cfg(any(target_arch = "arm", all(doc, not(target_arch = "aarch64"))))]
     {
         crate::core_arch::arm::vld1_u64(ptr)
     }
@@ -2431,7 +2431,7 @@ pub unsafe fn vld1_dup_p64(ptr: *const p64) -> poly64x1_t {
     {
         crate::core_arch::aarch64::vld1_p64(ptr)
     }
-    #[cfg(target_arch = "arm")]
+    #[cfg(any(target_arch = "arm", all(doc, not(target_arch = "aarch64"))))]
     {
         crate::core_arch::arm::vld1_p64(ptr)
     }
@@ -9558,7 +9558,7 @@ pub unsafe fn vrev64q_p16(a: poly16x8_t) -> poly16x8_t {
     unstable(feature = "stdarch_arm_neon_intrinsics", issue = "111800")
 )]
 pub unsafe fn vpadal_s8(a: int16x4_t, b: int8x8_t) -> int16x4_t {
-    #[cfg(target_arch = "arm")]
+    #[cfg(any(target_arch = "arm", all(doc, not(target_arch = "aarch64"))))]
     {
         crate::core_arch::arm::neon::vpadal_s8_(a, b)
     }
@@ -9586,7 +9586,7 @@ pub unsafe fn vpadal_s8(a: int16x4_t, b: int8x8_t) -> int16x4_t {
     unstable(feature = "stdarch_arm_neon_intrinsics", issue = "111800")
 )]
 pub unsafe fn vpadal_s16(a: int32x2_t, b: int16x4_t) -> int32x2_t {
-    #[cfg(target_arch = "arm")]
+    #[cfg(any(target_arch = "arm", all(doc, not(target_arch = "aarch64"))))]
     {
         crate::core_arch::arm::neon::vpadal_s16_(a, b)
     }
@@ -9614,7 +9614,7 @@ pub unsafe fn vpadal_s16(a: int32x2_t, b: int16x4_t) -> int32x2_t {
     unstable(feature = "stdarch_arm_neon_intrinsics", issue = "111800")
 )]
 pub unsafe fn vpadal_s32(a: int64x1_t, b: int32x2_t) -> int64x1_t {
-    #[cfg(target_arch = "arm")]
+    #[cfg(any(target_arch = "arm", all(doc, not(target_arch = "aarch64"))))]
     {
         crate::core_arch::arm::neon::vpadal_s32_(a, b)
     }
@@ -9642,7 +9642,7 @@ pub unsafe fn vpadal_s32(a: int64x1_t, b: int32x2_t) -> int64x1_t {
     unstable(feature = "stdarch_arm_neon_intrinsics", issue = "111800")
 )]
 pub unsafe fn vpadalq_s8(a: int16x8_t, b: int8x16_t) -> int16x8_t {
-    #[cfg(target_arch = "arm")]
+    #[cfg(any(target_arch = "arm", all(doc, not(target_arch = "aarch64"))))]
     {
         crate::core_arch::arm::neon::vpadalq_s8_(a, b)
     }
@@ -9670,7 +9670,7 @@ pub unsafe fn vpadalq_s8(a: int16x8_t, b: int8x16_t) -> int16x8_t {
     unstable(feature = "stdarch_arm_neon_intrinsics", issue = "111800")
 )]
 pub unsafe fn vpadalq_s16(a: int32x4_t, b: int16x8_t) -> int32x4_t {
-    #[cfg(target_arch = "arm")]
+    #[cfg(any(target_arch = "arm", all(doc, not(target_arch = "aarch64"))))]
     {
         crate::core_arch::arm::neon::vpadalq_s16_(a, b)
     }
@@ -9698,7 +9698,7 @@ pub unsafe fn vpadalq_s16(a: int32x4_t, b: int16x8_t) -> int32x4_t {
     unstable(feature = "stdarch_arm_neon_intrinsics", issue = "111800")
 )]
 pub unsafe fn vpadalq_s32(a: int64x2_t, b: int32x4_t) -> int64x2_t {
-    #[cfg(target_arch = "arm")]
+    #[cfg(any(target_arch = "arm", all(doc, not(target_arch = "aarch64"))))]
     {
         crate::core_arch::arm::neon::vpadalq_s32_(a, b)
     }
@@ -9726,7 +9726,7 @@ pub unsafe fn vpadalq_s32(a: int64x2_t, b: int32x4_t) -> int64x2_t {
     unstable(feature = "stdarch_arm_neon_intrinsics", issue = "111800")
 )]
 pub unsafe fn vpadal_u8(a: uint16x4_t, b: uint8x8_t) -> uint16x4_t {
-    #[cfg(target_arch = "arm")]
+    #[cfg(any(target_arch = "arm", all(doc, not(target_arch = "aarch64"))))]
     {
         crate::core_arch::arm::neon::vpadal_u8_(a, b)
     }
@@ -9754,7 +9754,7 @@ pub unsafe fn vpadal_u8(a: uint16x4_t, b: uint8x8_t) -> uint16x4_t {
     unstable(feature = "stdarch_arm_neon_intrinsics", issue = "111800")
 )]
 pub unsafe fn vpadal_u16(a: uint32x2_t, b: uint16x4_t) -> uint32x2_t {
-    #[cfg(target_arch = "arm")]
+    #[cfg(any(target_arch = "arm", all(doc, not(target_arch = "aarch64"))))]
     {
         crate::core_arch::arm::neon::vpadal_u16_(a, b)
     }
@@ -9782,7 +9782,7 @@ pub unsafe fn vpadal_u16(a: uint32x2_t, b: uint16x4_t) -> uint32x2_t {
     unstable(feature = "stdarch_arm_neon_intrinsics", issue = "111800")
 )]
 pub unsafe fn vpadal_u32(a: uint64x1_t, b: uint32x2_t) -> uint64x1_t {
-    #[cfg(target_arch = "arm")]
+    #[cfg(any(target_arch = "arm", all(doc, not(target_arch = "aarch64"))))]
     {
         crate::core_arch::arm::neon::vpadal_u32_(a, b)
     }
@@ -9810,7 +9810,7 @@ pub unsafe fn vpadal_u32(a: uint64x1_t, b: uint32x2_t) -> uint64x1_t {
     unstable(feature = "stdarch_arm_neon_intrinsics", issue = "111800")
 )]
 pub unsafe fn vpadalq_u8(a: uint16x8_t, b: uint8x16_t) -> uint16x8_t {
-    #[cfg(target_arch = "arm")]
+    #[cfg(any(target_arch = "arm", all(doc, not(target_arch = "aarch64"))))]
     {
         crate::core_arch::arm::neon::vpadalq_u8_(a, b)
     }
@@ -9838,7 +9838,7 @@ pub unsafe fn vpadalq_u8(a: uint16x8_t, b: uint8x16_t) -> uint16x8_t {
     unstable(feature = "stdarch_arm_neon_intrinsics", issue = "111800")
 )]
 pub unsafe fn vpadalq_u16(a: uint32x4_t, b: uint16x8_t) -> uint32x4_t {
-    #[cfg(target_arch = "arm")]
+    #[cfg(any(target_arch = "arm", all(doc, not(target_arch = "aarch64"))))]
     {
         crate::core_arch::arm::neon::vpadalq_u16_(a, b)
     }
@@ -9866,7 +9866,7 @@ pub unsafe fn vpadalq_u16(a: uint32x4_t, b: uint16x8_t) -> uint32x4_t {
     unstable(feature = "stdarch_arm_neon_intrinsics", issue = "111800")
 )]
 pub unsafe fn vpadalq_u32(a: uint64x2_t, b: uint32x4_t) -> uint64x2_t {
-    #[cfg(target_arch = "arm")]
+    #[cfg(any(target_arch = "arm", all(doc, not(target_arch = "aarch64"))))]
     {
         crate::core_arch::arm::neon::vpadalq_u32_(a, b)
     }

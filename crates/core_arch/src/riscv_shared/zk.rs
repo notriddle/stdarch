@@ -27,7 +27,7 @@ extern "unadjusted" {
     fn _sha256sum1(rs1: i32) -> i32;
 }
 
-#[cfg(target_arch = "riscv32")]
+#[cfg(any(target_arch = "riscv32", all(doc, not(target_arch = "riscv64"))))]
 extern "unadjusted" {
     #[link_name = "llvm.riscv.xperm8.i32"]
     fn _xperm8_32(rs1: i32, rs2: i32) -> i32;
@@ -66,7 +66,7 @@ extern "unadjusted" {
 #[cfg_attr(test, assert_instr(xperm8))]
 #[inline]
 pub unsafe fn xperm8(rs1: usize, rs2: usize) -> usize {
-    #[cfg(target_arch = "riscv32")]
+    #[cfg(any(target_arch = "riscv32", all(doc, not(target_arch = "riscv64"))))]
     {
         _xperm8_32(rs1 as i32, rs2 as i32) as usize
     }
@@ -98,7 +98,7 @@ pub unsafe fn xperm8(rs1: usize, rs2: usize) -> usize {
 #[cfg_attr(test, assert_instr(xperm4))]
 #[inline]
 pub unsafe fn xperm4(rs1: usize, rs2: usize) -> usize {
-    #[cfg(target_arch = "riscv32")]
+    #[cfg(any(target_arch = "riscv32", all(doc, not(target_arch = "riscv64"))))]
     {
         _xperm4_32(rs1 as i32, rs2 as i32) as usize
     }

@@ -1,7 +1,7 @@
 #[cfg(test)]
 use stdarch_test::assert_instr;
 
-#[cfg(target_arch = "riscv32")]
+#[cfg(any(target_arch = "riscv32", all(doc, not(target_arch = "riscv64"))))]
 extern "unadjusted" {
     #[link_name = "llvm.riscv.orc.b.i32"]
     fn _orc_b_32(rs: i32) -> i32;
@@ -51,7 +51,7 @@ extern "unadjusted" {
 #[cfg_attr(test, assert_instr(orc.b))]
 #[inline]
 pub unsafe fn orc_b(rs: usize) -> usize {
-    #[cfg(target_arch = "riscv32")]
+    #[cfg(any(target_arch = "riscv32", all(doc, not(target_arch = "riscv64"))))]
     {
         _orc_b_32(rs as i32) as usize
     }
@@ -80,7 +80,7 @@ pub unsafe fn orc_b(rs: usize) -> usize {
 #[cfg_attr(test, assert_instr(clmul))]
 #[inline]
 pub unsafe fn clmul(rs1: usize, rs2: usize) -> usize {
-    #[cfg(target_arch = "riscv32")]
+    #[cfg(any(target_arch = "riscv32", all(doc, not(target_arch = "riscv64"))))]
     {
         _clmul_32(rs1 as i32, rs2 as i32) as usize
     }
@@ -109,7 +109,7 @@ pub unsafe fn clmul(rs1: usize, rs2: usize) -> usize {
 #[cfg_attr(test, assert_instr(clmulh))]
 #[inline]
 pub unsafe fn clmulh(rs1: usize, rs2: usize) -> usize {
-    #[cfg(target_arch = "riscv32")]
+    #[cfg(any(target_arch = "riscv32", all(doc, not(target_arch = "riscv64"))))]
     {
         _clmulh_32(rs1 as i32, rs2 as i32) as usize
     }
@@ -138,7 +138,7 @@ pub unsafe fn clmulh(rs1: usize, rs2: usize) -> usize {
 #[cfg_attr(test, assert_instr(clmulr))]
 #[inline]
 pub unsafe fn clmulr(rs1: usize, rs2: usize) -> usize {
-    #[cfg(target_arch = "riscv32")]
+    #[cfg(any(target_arch = "riscv32", all(doc, not(target_arch = "riscv64"))))]
     {
         _clmulr_32(rs1 as i32, rs2 as i32) as usize
     }
